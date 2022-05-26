@@ -1,0 +1,51 @@
+h1 {
+  background-color: black;
+  color: salmon;
+  padding: 30px;
+  width: 420px;
+}
+
+footer {
+  background-color: burlywood;
+  width: 500px;
+}
+
+ul {
+  list-style: none;
+  padding: 0%;
+  margin: 60px 0;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  text-text-transform: uppercase;
+  text-text-align: center;
+  color: white;
+  padding: 2opx;
+  background-color: blue;
+}
+
+ul li a font {
+  family: sans-serif;
+  size: 23px;
+}
+
+h1 {
+  font-size: 20px;
+  color: blue;
+  background-color: red;
+  padding: 30px;
+  width: 420px;
+}
+
+footer {
+  color: blue;
+  background-color: white;
+  padding: 30px;
+  width: 420px;
+}
+/*# sourceMappingURL=style.css.map */

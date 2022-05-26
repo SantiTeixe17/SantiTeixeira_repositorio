@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: letra coffe;
+    src: url(../tipografia/Coffee\ Extra.ttf);
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 5cm, 5cm, 5cm;
+    
+}
+
+main{
+    grid-area: main;
+    font-family: letra coffe; 
+    background-image: url(https://turbologo.com/articles/wp-content/uploads/2020/12/fitness.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    grid-area: footer; 
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-family: letra coffe;
+    color: rgb(220, 20, 20);
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+.center{
+    height: auto;
+    width: auto;
+    color: black;
+    background-color: inherit;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    background-color: brown
+}
+
+h3 {
+    display: inline-block;
+    color: black;
+    background-color: aquamarine;
+}
+
+
+p {
+    color: brown;
+    background-color: cadetblue
+}
+
+
+div img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    color: black;
+}
+
+p {
+    display: inline-block;
+}
+
+.contacto1 {
+    display: inline-block;
+    color: aqua;
+    background-color: black;
+    
+}
+
+.mail {
+    color: cadetblue;
+}
+
+.pnosotros {
+    color: none;
+}
+
+.imgsalamuscu {
+    margin: 0px;
+    border: 1px solid #999;
+    padding: 13px;
+    width: 200px;
+    height: 220px;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(2);
+
+}
+
+.imgsalacardio {
+    margin: 10px auto;
+    padding: 0%;
+    width: auto;
+    height: 20%;
+}
+
+div.imag span {
+    line-height: normal;
+    font-size: 11px;
+    display: table-caption;
+    margin: 0;
+    background: #646464;
+    color: white;
+    font-style: italic;
+    padding: 5px;
+    text-align: center;
+}
+
+.novedades1 {
+    display: inline-block;
+    color: cornsilk;
+    background-color: black;
+}
+
+div p.dias {
+    background-color: none;
+}
+
+div p.dias {
+    background-color: aliceblue;
+    color: black
+}
+
+p.planes {
+    background-color: initial;
+    color: black;
+    font-size: 1cm;
+}
+div p.div2 {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    font-size: 1cm;
+}
+div h2{
+    background-color: rgb(22, 20, 20);
+    font-size: 1cm;
+}
+p.planstan {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(0, 0, 0, 0.999);
+    font-size: 0.7cm;
+}
+
+div p.planpremium {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    font-size: 0.7cm;
+}
+
+div p.div1m {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    font-size: 1cm;
+}
+div p.div2b {
+    background-color: initial;
+    color: black;
+    font-size: 1cm;
+}
+div p.div3c {
+    background-color: initial;
+    color: black;
+    font-size: 1cm;
+}
+div p.div4d {
+    background-color: initial;
+    color: black;
+    font-size: 1cm;
+}
+div p.div5e {
+    background-color: initial;
+    color: black;
+    font-size: 1cm;
+}
+.grid-item1 {
+    display: grid;
+    font-size: 0.7cm;
+    
+}
+
+.grid-item2 {
+    font-size: 0.7cm;
+}
+.grid-item3 {
+    font-size: 0.7cm;
+}
+h1 .beneficios {
+    background-color: black;
+    color: black;
+}
+strong{
+    background-color: rgba(255, 255, 255, 0.347);
+    color: black;
+    font-size: 1cm;
+}
+div .carousel-inner {
+    display: flex;
+    align-items: center;
+}

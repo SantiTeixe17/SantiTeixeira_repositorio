@@ -1,0 +1,52 @@
+$colorbg: salmon;
+$widthH1: 400px;
+$widthFooter: 500px;
+$w2: $widthH1 + 20px;
+h1 {
+    background-color: black;
+    color: $colorbg;
+    padding: 30px;
+    width: $w2;
+}
+footer {
+    background-color: burlywood;
+    width: $widthFooter;
+}
+ul {
+    list-style: none;
+    padding: 0%;
+    margin: 60px 0;
+
+    li{
+        display: inline-block;
+
+        a{
+            text: {
+                decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            font{
+                family: sans-serif;
+                size: 23px;
+            }
+            color: white;
+            padding: 2opx;
+            background-color: blue;
+        }
+     }
+}
+
+
+ul{
+
+}
+
+ul li{
+    
+
+}
+
+ul li a {
+
+}

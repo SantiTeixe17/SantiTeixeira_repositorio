@@ -1,0 +1,15 @@
+@import "menu";
+@mixin fontstyle($color) {
+    color: blue;
+    background-color: $color;
+    padding: 30px;
+    width: $w2;
+}
+h1 {
+    font-size: 20px;
+    @include fontstyle(red);
+}
+footer {
+    
+    @include fontstyle(white);
+}
