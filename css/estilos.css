@@ -15,7 +15,7 @@ body {
         "main"
         "footer";
     grid-template-rows: 5cm, 5cm, 5cm;
-    
+
 }
 
 main{
@@ -24,6 +24,8 @@ main{
     background-image: url(https://turbologo.com/articles/wp-content/uploads/2020/12/fitness.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 footer{
@@ -34,7 +36,7 @@ footer{
     font-family: letra coffe;
     color: rgb(220, 20, 20);
     background-color: rgba(0, 0, 0, 0);
-
+    
 }
 
 .center{
