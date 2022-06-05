@@ -1,17 +1,8 @@
 $colorbg: salmon;
 $widthH1: 400px;
-$widthFooter: 500px;
 $w2: $widthH1 + 20px;
-h1 {
-    background-color: black;
-    color: $colorbg;
-    padding: 30px;
-    width: $w2;
-}
-footer {
-    background-color: burlywood;
-    width: $widthFooter;
-}
+
+
 ul {
     list-style: none;
     padding: 0%;

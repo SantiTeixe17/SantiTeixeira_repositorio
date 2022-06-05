@@ -1,14 +1,4 @@
-h1 {
-  background-color: black;
-  color: salmon;
-  padding: 30px;
-  width: 420px;
-}
 
-footer {
-  background-color: burlywood;
-  width: 500px;
-}
 
 ul {
   list-style: none;
@@ -34,18 +24,5 @@ ul li a font {
   size: 23px;
 }
 
-h1 {
-  font-size: 20px;
-  color: blue;
-  background-color: red;
-  padding: 30px;
-  width: 420px;
-}
 
-footer {
-  color: blue;
-  background-color: white;
-  padding: 30px;
-  width: 420px;
-}
 /*# sourceMappingURL=style.css.map */

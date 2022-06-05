@@ -21,7 +21,6 @@ body {
 main{
     grid-area: main;
     font-family: letra coffe; 
-    /*background-image: url(https://turbologo.com/articles/wp-content/uploads/2020/12/fitness.png);*/
     background-image: url(https://wallpaperaccess.com/full/4070873.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,15 +36,7 @@ footer{
     color: black;
     background-color: #26272b;
 }
-/*.center{
-    height: auto;
-    width: auto;
-    color: black;
-    background-color: inherit;
-    text-align: center;
-    vertical-align: middle;
 
-}*/
 #visor-presentación {
     text-align: center;
 }
@@ -103,13 +94,6 @@ h3 {
     background-color: aquamarine;
 }
 
-
-/*p {
-    color: white;
-    background-color: black;
-}*/
-
-
 div img {
     display: flex;
     justify-content: center;
@@ -117,10 +101,6 @@ div img {
     border-style: solid;
     color: black;
 }
-
-/*p {
-    display: inline-block;
-}*/
 
 .contacto1 {
     display: inline-block;
@@ -150,37 +130,6 @@ div img {
     color: none;
 }
 
-/*.imgsalamuscu {
-    margin: 0px;
-    border: 1px solid #999;
-    padding: 13px;
-    width: 200px;
-    height: 220px;
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: scale(2);
-
-}
-
-.imgsalacardio {
-    margin: 5%;
-    padding: 5%;
-    height: 5%;
-}*/
-
-/*div.imag span {
-    line-height: normal;
-    font-size: 11px;
-    display: table-caption;
-    margin: 0;
-    background: #646464;
-    color: white;
-    font-style: italic;
-    padding: 5px;
-    text-align: center;
-}*/
-
 .novedades1 {
     display: inline-block;
     color: cornsilk;
@@ -201,9 +150,6 @@ div img {
       opacity: 0.6;
     } 
 }
-/*div p.dias {
-    color: black
-}*/
 
 p.planes {
     color:white;
@@ -286,10 +232,7 @@ strong{
     color: black;
     font-size: 1cm;
 }
-/*div .carousel-inner {
-    display: flex;
-    align-items: center;
-}*/
+
 .card-title {
     display: inline-block;
     background-color: black;
@@ -316,7 +259,7 @@ ul.socialIcons {
     max-width: 1.28571429em;
     height: 1.28571429em;
     white-space: nowrap;
-    line-height: 1.5em; /*it's working only when you write text with icon*/
+    line-height: 1.5em; 
     transition: 0.5s;
     text-decoration: none;
     font-family: arial;
