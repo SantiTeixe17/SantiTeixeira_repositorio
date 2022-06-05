@@ -33,13 +33,10 @@ footer{
     grid-area: footer; 
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
     font-family: letra coffe;
-    color: rgb(220, 20, 20);
-    background-color: gray;
-    
+    color: black;
+    background-color: #26272b;
 }
-
 /*.center{
     height: auto;
     width: auto;
@@ -54,12 +51,43 @@ footer{
 }
 .presentación {
     color: white;
-    background-color: black;
+    animation: presentación 1s 1;
 }
-h1.info {
+
+@keyframes presentación {
+ 
+    0%{
+      opacity: 0;
+    }
+    
+    50% {
+      opacity: 0.3;
+    } 
+  
+    70% {
+      opacity: 0.6;
+    } 
+    
+}
+.info {
     display: inline-block;
     background-color: black;
     color: white;
+    animation: info 1s 1;
+}
+@keyframes info {
+ 
+    0%{
+      opacity: 0;
+    }
+    
+    50% {
+      opacity: 0.3;
+    } 
+  
+    70% {
+      opacity: 0.6;
+    } 
 }
 h2 {
     display: flex;
@@ -98,9 +126,22 @@ div img {
     display: inline-block;
     color: white;
     background-color: black;
-    
+    animation: contacto1 1s 1;
 }
-
+@keyframes contacto1 {
+ 
+    0%{
+      opacity: 0;
+    }
+    
+    50% {
+      opacity: 0.3;
+    } 
+  
+    70% {
+      opacity: 0.6;
+    } 
+}
 .mail {
     color: rgb(95, 125, 160);
 }
@@ -128,7 +169,7 @@ div img {
     height: 5%;
 }*/
 
-div.imag span {
+/*div.imag span {
     line-height: normal;
     font-size: 11px;
     display: table-caption;
@@ -138,14 +179,28 @@ div.imag span {
     font-style: italic;
     padding: 5px;
     text-align: center;
-}
+}*/
 
 .novedades1 {
     display: inline-block;
     color: cornsilk;
     background-color: black;
+    animation: novedades1 1s 1;
 }
-
+@keyframes novedades1 {
+ 
+    0%{
+      opacity: 0;
+    }
+    
+    50% {
+      opacity: 0.3;
+    } 
+  
+    70% {
+      opacity: 0.6;
+    } 
+}
 /*div p.dias {
     color: black
 }*/
@@ -210,6 +265,21 @@ div p.div5e {
     display: inline-block;
     background-color: black;
     color: white;
+    animation: beneficios 1s 1;
+}
+@keyframes beneficios {
+ 
+    0%{
+      opacity: 0;
+    }
+    
+    50% {
+      opacity: 0.3;
+    } 
+  
+    70% {
+      opacity: 0.6;
+    } 
 }
 strong{
     background-color: rgba(255, 255, 255, 0.347);
