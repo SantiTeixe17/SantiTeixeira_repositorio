@@ -21,7 +21,8 @@ body {
 main{
     grid-area: main;
     font-family: letra coffe; 
-    background-image: url(https://turbologo.com/articles/wp-content/uploads/2020/12/fitness.png);
+    /*background-image: url(https://turbologo.com/articles/wp-content/uploads/2020/12/fitness.png);*/
+    background-image: url(https://wallpaperaccess.com/full/4070873.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -35,11 +36,11 @@ footer{
     align-items: flex-start;
     font-family: letra coffe;
     color: rgb(220, 20, 20);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: gray;
     
 }
 
-.center{
+/*.center{
     height: auto;
     width: auto;
     color: black;
@@ -47,8 +48,19 @@ footer{
     text-align: center;
     vertical-align: middle;
 
+}*/
+#visor-presentación {
+    text-align: center;
 }
-
+.presentación {
+    color: white;
+    background-color: black;
+}
+h1.info {
+    display: inline-block;
+    background-color: black;
+    color: white;
+}
 h2 {
     display: flex;
     justify-content: center;
@@ -64,10 +76,10 @@ h3 {
 }
 
 
-p {
-    color: brown;
-    background-color: cadetblue
-}
+/*p {
+    color: white;
+    background-color: black;
+}*/
 
 
 div img {
@@ -78,26 +90,26 @@ div img {
     color: black;
 }
 
-p {
+/*p {
     display: inline-block;
-}
+}*/
 
 .contacto1 {
     display: inline-block;
-    color: aqua;
+    color: white;
     background-color: black;
     
 }
 
 .mail {
-    color: cadetblue;
+    color: rgb(95, 125, 160);
 }
 
 .pnosotros {
     color: none;
 }
 
-.imgsalamuscu {
+/*.imgsalamuscu {
     margin: 0px;
     border: 1px solid #999;
     padding: 13px;
@@ -111,11 +123,10 @@ p {
 }
 
 .imgsalacardio {
-    margin: 10px auto;
-    padding: 0%;
-    width: auto;
-    height: 20%;
-}
+    margin: 5%;
+    padding: 5%;
+    height: 5%;
+}*/
 
 div.imag span {
     line-height: normal;
@@ -135,23 +146,16 @@ div.imag span {
     background-color: black;
 }
 
-div p.dias {
-    background-color: none;
-}
-
-div p.dias {
-    background-color: aliceblue;
+/*div p.dias {
     color: black
-}
+}*/
 
 p.planes {
-    background-color: initial;
-    color: black;
+    color:white;
     font-size: 1cm;
 }
 div p.div2 {
-    background-color: rgba(255, 255, 255, 0);
-    color: black;
+    color:white;
     font-size: 1cm;
 }
 div h2{
@@ -159,64 +163,119 @@ div h2{
     font-size: 1cm;
 }
 p.planstan {
-    background-color: rgba(255, 255, 255, 0);
-    color: rgba(0, 0, 0, 0.999);
+    color:white;
     font-size: 0.7cm;
 }
 
 div p.planpremium {
-    background-color: rgba(255, 255, 255, 0);
-    color: black;
+    color:white;
     font-size: 0.7cm;
 }
 
 div p.div1m {
-    background-color: rgba(255, 255, 255, 0);
-    color: black;
+    color:white;
     font-size: 1cm;
 }
 div p.div2b {
-    background-color: initial;
-    color: black;
+    color:white;
     font-size: 1cm;
 }
 div p.div3c {
-    background-color: initial;
-    color: black;
+    color:white;
     font-size: 1cm;
 }
 div p.div4d {
-    background-color: initial;
-    color: black;
+    color:white;
     font-size: 1cm;
 }
 div p.div5e {
-    background-color: initial;
-    color: black;
+    color:white;
     font-size: 1cm;
 }
 .grid-item1 {
-    display: grid;
+    color: white;
     font-size: 0.7cm;
-    
+
 }
 
 .grid-item2 {
+    color: white;
     font-size: 0.7cm;
 }
 .grid-item3 {
+    color: white;
     font-size: 0.7cm;
 }
-h1 .beneficios {
+.beneficios {
+    display: inline-block;
     background-color: black;
-    color: black;
+    color: white;
 }
 strong{
     background-color: rgba(255, 255, 255, 0.347);
     color: black;
     font-size: 1cm;
 }
-div .carousel-inner {
+/*div .carousel-inner {
     display: flex;
     align-items: center;
+}*/
+.card-title {
+    display: inline-block;
+    background-color: black;
+    color: white;
+}
+ul.socialIcons {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .socialIcons li {
+    background-color: yellow;
+    list-style: none;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 2em;
+    overflow: hidden;
+ }
+  
+  .socialIcons li a {
+    display: block;
+    padding: 1.5em;
+    min-width: 1.28571429em;
+    max-width: 1.28571429em;
+    height: 1.28571429em;
+    white-space: nowrap;
+    line-height: 1.5em; /*it's working only when you write text with icon*/
+    transition: 0.5s;
+    text-decoration: none;
+    font-family: arial;
+    color: #fff;
+  }
+  
+  .socialIcons li i {
+    margin-right: 0.5em;
+  }
+  
+  .socialIcons li:hover a {
+    max-width: 200px;
+    padding-right: 2em;
+  }
+  
+  .socialIcons .facebook {
+    background-color: #3b5998;
+    box-shadow: 0 0 16px #3b5998;
+  }
+  
+  .socialIcons .twitter {
+    background-color: #00aced;
+    box-shadow: 0 0 16px #00aced;
+  }
+  
+  .socialIcons .instagram {
+    background-color: #cd486b;
+    box-shadow: 0 0 16px #cd486b;
+  }
+.sobre-nosotros-texto {
+    color: white;
 }
