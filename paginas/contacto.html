@@ -8,6 +8,7 @@
     <meta name="description" content="Unete y contactanos para recibir toda la información">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="animate.css">
     <link rel="shortcut icon" href="../recursos/mancuerna img.jpg">
     <title>Contactanos - Gimnasio Biofit</title>
@@ -45,41 +46,72 @@
           </nav>
         </header>
         <main>
-         <section> 
-             <h1 class="contacto1"><u>CONTACTANOS</u></h1>
-             <article class="mail">
-                <form action="#">
-                    <input type="text" placeholder="Ingrese su nombre"><br>
-                    <label for="email"><u>Decime tu email:</u>
-                        <input type="email" placeholder="aaa@gmail.com"  name="email"><br>
-                    </label>
-                    <label for="Observaciones"><u>Observaciones:</u><br>
-                        <textarea placeholder="Observaciones"></textarea>
-                    </label> <br>
-                    <input type="number" placeholder="DECIME TU EDAD"><br>
-                    <div><p><u>Elegí un lado:</u></p>
-                        <div>Izquierda
-                            <input type="radio" name="lado" value="izquierda">
-                        </div>
-                        <div>Derecha
-                            <input type="radio" name="lado" value="derecha">
-                        </div>
-                    </div>
-                    <p><u>Que letra te gusta mas?</u></p>
-                    <select name="letra" id="letra"> 
-                        <option value="x">x</option>
-                        <option value="y">Y</option>
-                        <option value="z">Z</option>
-                    </select>
-                    <div><u>Queres recibir info sobre nosotros?</u>
-                    <input type="checkbox" name="acepta" value="1"></div>
-                    <input type="submit" value="PASAME LA DATA">
-                    <input type="reset" value="RESETEAR">
-                </form>
-            </article>
-         </section>
+         <div class="form-body">
+          <div class="row">
+              <div class="form-holder">
+                  <div class="form-content">
+                      <div class="form-items">
+                        <h1 class="contacto1"><u>CONTACTANOS</u></h1>
+                          <p class="contacto-p"><u>Envianos tus datos </u></p>
+                          <form class="requires-validation" novalidate>
+  
+                              <div class="col-md-12">
+                                 <input class="form-control" type="text" name="name" placeholder="Nombre Completo" required>
+                                 <div class="valid-feedback">Username field is valid!</div>
+                                 <div class="invalid-feedback">Username field cannot be blank!</div>
+                              </div>
+  
+                              <div class="col-md-12">
+                                  <input class="form-control" type="email" name="email" placeholder="Correo Electrónico" required>
+                                   <div class="valid-feedback">Email field is valid!</div>
+                                   <div class="invalid-feedback">Email field cannot be blank!</div>
+                              </div>
+                                  <div class="valid-feedback">You selected a position!</div>
+                                  <div class="invalid-feedback">Please select a position!</div>
+                             </div>
+  
+  
+                             <div class="col-md-12">
+                                <input class="form-control" type="password" name="password" placeholder="Password" required>
+                                 <div class="valid-feedback">Password field is valid!</div>
+                                 <div class="invalid-feedback">Password field cannot be blank!</div>
+                             </div>
+  
+  
+                             <div class="col-md-12 mt-3">
+                              <label class="mb-3 mr-1" for="Género"><p class="genero-color"><u>Género:</u></p> </label>
+  
+                              <input type="radio" class="btn-check" name="Género" id="Hombre" autocomplete="off" required>
+                              <label class="btn btn-sm btn-outline-secondary" for="Hombre">Hombre</label>
+  
+                              <input type="radio" class="btn-check" name="Género" id="Mujer" autocomplete="off" required>
+                              <label class="btn btn-sm btn-outline-secondary" for="Mujer">Mujer</label>
+  
+                              <input type="radio" class="btn-check" name="Género" id="Otros" autocomplete="off" required>
+                              <label class="btn btn-sm btn-outline-secondary" for="Otros">Otros</label>
+                                 <div class="valid-feedback mv-up">You selected a gender!</div>
+                                  <div class="invalid-feedback mv-up">Please select a gender!</div>
+                              </div>
+  
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label"><p class="datos">Confirmo que todos los datos son correctos.</p></label>
+                           <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                          </div>
+                    
+  
+                              <div class="form-button mt-3">
+                                  <button id="submit" type="submit" class="btn btn-primary">Enviar</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+                          <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
     </main>
-    
+      
     <footer>Todos Los Derechos Resevados| Copyright | 
       <ul class="socialIcons">
         <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>

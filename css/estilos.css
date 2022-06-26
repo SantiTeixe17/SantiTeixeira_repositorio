@@ -9,23 +9,19 @@
 }
 
 body {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
+    grid-area: body;
     grid-template-rows: 5cm, 5cm, 5cm;
-
-}
-
-main{
-    grid-area: main;
-    font-family: letra coffe; 
     background-image: url(https://wallpaperaccess.com/full/4070873.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
+}
+
+main{
+    grid-area: main;
+    font-family: letra coffe;
+    max-width: 100%;
 }
 
 footer{
@@ -35,6 +31,7 @@ footer{
     font-family: letra coffe;
     color: black;
     background-color: #26272b;
+    margin-bottom: auto;
 }
 
 #visor-presentación {
@@ -61,8 +58,8 @@ footer{
     
 }
 .info {
-    display: inline-block;
-    background-color: black;
+    text-align: center;
+    background-color: none;
     color: white;
     animation: info 1s 1;
 }
@@ -92,6 +89,7 @@ h3 {
     display: inline-block;
     color: black;
     background-color: aquamarine;
+    
 }
 
 div img {
@@ -103,9 +101,9 @@ div img {
 }
 
 .contacto1 {
-    display: inline-block;
+    text-align: center;
     color: white;
-    background-color: black;
+    background-color: none;
     animation: contacto1 1s 1;
 }
 @keyframes contacto1 {
@@ -122,19 +120,11 @@ div img {
       opacity: 0.6;
     } 
 }
-.mail {
-    color: rgb(95, 125, 160);
-}
-
-.pnosotros {
-    color: none;
-}
-
 .novedades1 {
-    display: inline-block;
-    color: cornsilk;
-    background-color: black;
+    color: white;
+    background-color: none;
     animation: novedades1 1s 1;
+    text-align: center;
 }
 @keyframes novedades1 {
  
@@ -164,13 +154,17 @@ div h2{
     font-size: 1cm;
 }
 p.planstan {
-    color:white;
+    color: black;
     font-size: 0.7cm;
+    background-color: white;
+    display: inline-block;
 }
 
 div p.planpremium {
-    color:white;
+    color: black;
     font-size: 0.7cm;
+    background-color: white;
+    display: inline-block;
 }
 
 div p.div1m {
@@ -193,23 +187,23 @@ div p.div5e {
     color:white;
     font-size: 1cm;
 }
-.grid-item1 {
+.item1 {
     color: white;
     font-size: 0.7cm;
 
 }
 
-.grid-item2 {
+.item2 {
     color: white;
     font-size: 0.7cm;
 }
-.grid-item3 {
+.item3 {
     color: white;
     font-size: 0.7cm;
 }
 .beneficios {
-    display: inline-block;
-    background-color: black;
+    text-align: center;
+    background-color: none;
     color: white;
     animation: beneficios 1s 1;
 }
@@ -227,17 +221,13 @@ div p.div5e {
       opacity: 0.6;
     } 
 }
-strong{
-    background-color: rgba(255, 255, 255, 0.347);
-    color: black;
-    font-size: 1cm;
-}
 
 .card-title {
     display: inline-block;
     background-color: black;
     color: white;
 }
+
 ul.socialIcons {
     padding: 0;
     text-align: center;
@@ -290,5 +280,20 @@ ul.socialIcons {
     box-shadow: 0 0 16px #cd486b;
   }
 .sobre-nosotros-texto {
+    color: white;
+}
+.contacto-p  {
+    color: #3b5998;
+    font-size: 1cm;
+}
+.genero-color {
+    color: #3b5998;
+    font-size: 0.5cm;
+}
+.datos {
+    color: beige;
+}
+.div6 {
+    font-size: 1cm;
     color: white;
 }
