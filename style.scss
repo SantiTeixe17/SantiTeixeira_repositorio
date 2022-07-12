@@ -1,9 +1,5 @@
 @import "menu";
 @mixin fontstyle($color) {
-    color: blue;
-    background-color: $color;
-}
-h1 {
-    font-size: 20px;
-    @include fontstyle(red);
+    color: cadetblue;
+    
 }
