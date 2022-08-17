@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1cm;
+    background-color: darkgrey;
+}
+
+.cuadrado{
+    grid-area: contactanos_contacto;
+    width: 370px;
+    height: 550px;
+    background-color: rgba(223, 163, 86, 0.822);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.texto1{
+    font-size: 0.65cm;
+}
+
+#boton{
+    background-color: black;
+    border: 10px, solid,white;
+
+}
+
+.section-cuadrado{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    color: white;
+}
+
+.section-cuadrado .carrito-titulo{
+    border: solid 2px  white;
+    padding-left: 40px;
+    color: white;
+
+}
