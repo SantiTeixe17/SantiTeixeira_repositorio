@@ -2,9 +2,9 @@
 
 //CALCULO DE IGV
 
-function calcular_igv(precio){
-    let igv = precio*0.20
-    return igv
+function calcular_iva(precio){
+    let iva = precio*0.20
+    return iva
 }
 
 console.log("Bienvenido al carrito de compras");
@@ -18,8 +18,8 @@ console.log("Producto: ", nombre_producto);
 console.log("Precio de producto:", precio_producto);
 console.log("Cantidad de productos:" , cantidad_producto);
 
-    let precio_total = precio_producto * cantidad_producto;
-    console.log("La operación grabada es de: $", precio_total);
+    let precio_mas_iva = precio_producto + calcular_iva (cantidad_producto);
+    console.log("El precio con iva es de: $", precio_mas_iva);
 
 
 
