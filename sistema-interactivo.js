@@ -1,6 +1,6 @@
 
 
-//CALCULO DE IGV
+//CALCULO DE IVA
 
 function calcular_iva(precio){
     let iva = precio*0.20
@@ -20,6 +20,18 @@ console.log("Cantidad de productos:" , cantidad_producto);
 
     let precio_mas_iva = precio_producto + calcular_iva (cantidad_producto);
     console.log("El precio con iva es de: $", precio_mas_iva);
+ 
+    // ARRAY
+
+    const productos = ["Carnes", "Legumbres", "Condimentos", "Verduras"]
+
+    productos.pop ()
+    console.log( productos);
+
+    productos.shift ()
+    console.log( productos);
+
+
 
 
 
