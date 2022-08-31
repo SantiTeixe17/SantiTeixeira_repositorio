@@ -1,7 +1,36 @@
 
 
-//CALCULO DE IVA
+//DOM
+let usuario_registrado = "Juan"
 
+
+    function saludar(){
+      let nombre = document.getElementById("nombre_usuario");
+
+      console.log("Hola bienvenido/a" , nombre.value);
+
+    }
+
+    function validar(){
+      let nombre = document.getElementById("nombre_usuario");
+      let mensaje = document.getElementById("mensaje");
+
+      if( nombre.value == usuario_registrado){
+        let parrafo = document.createElement("p");
+        mensaje.innerHTML = "";
+        parrafo.innerText = "Bienvenido"
+        parrafo.style.fontFamily= "Verdana";
+        parrafo.style.fontSize = "25px";
+        mensaje.append(parrafo);
+
+      }
+      else{
+          document.body.innerHTML = "<h2>ERROR USUARIO INCORRECTO</h2>"
+                                    "<p>El usuario: ${nombre.value} no se encontro</p>";
+      }
+    }
+
+//CALCULO DE IVA
 function calcular_iva(precio){
     let iva = precio*0.20
     return iva
@@ -111,14 +140,16 @@ console.log("Cantidad de productos:" , cantidad_producto);
         console.log(Zapallo.grasas);
         console.log(Zapallo.proteina);    
     }
+    productos.push ({id: 1, producto: "Pollo", categoria: "Carnes" , precio:30},
+                         {id: 3, producto: "Ketchup", categoria: "Condimentos" , precio:7}
+         )
 
+         productos.pop ({id: 4, producto: "Zapallo", categoria: "Verduras" , precio:20})
+         console.log (productos);
+         
       alert ("Hasta Luego");
 
-
-
-
-
-
+    
 
 
     
