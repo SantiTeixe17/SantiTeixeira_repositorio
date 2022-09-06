@@ -104,7 +104,7 @@ console.log("Cantidad de productos:" , cantidad_producto);
       }
       console.log(producto4);
 
-      const productos = [{ id: 1, producto: "Pollo",    categoria: "Carnes", calorias: 26, grasas: 0.1, proteina: 1},
+     /* const productos = [{ id: 1, producto: "Pollo",    categoria: "Carnes", calorias: 26, grasas: 0.1, proteina: 1},
                         {  id: 2, producto: "Lentejas", categoria: "Legumbres", calorias: 116, grasas: 0.4, proteina: 9},
                         {  id: 3, producto: "Ketchup",  categoria: "Condimentos", calorias: 112, grasas: 0.2, proteina: 1.3},  
                         {  id: 4, producto: "Zapallo",  categoria:  "Verduras", calorias: 26, grasas: 0.1, proteina: 1}];
@@ -145,9 +145,16 @@ console.log("Cantidad de productos:" , cantidad_producto);
          )
 
          productos.pop ({id: 4, producto: "Zapallo", categoria: "Verduras" , precio:20})
-         console.log (productos);
-         
-      alert ("Hasta Luego");
+         console.log (productos);*/
+    
+
+        let miFormulario  = document.getElementById("formulario");
+        miFormulario.addEventListener("submit" , validarFormulario);
+
+        function validarFormulario(e) {
+          e.preventDefault();
+          console.log("Formulario Enviado Correctamente");
+        }
 
     
 
