@@ -140,16 +140,6 @@ console.log("Cantidad de productos:" , cantidad_producto);
         console.log(Zapallo.grasas);
         console.log(Zapallo.proteina);    
     }
-    productos.push ({id: 1, producto: "Pollo", categoria: "Carnes" , precio:30},
-                         {id: 3, producto: "Ketchup", categoria: "Condimentos" , precio:7}
-         )
-
-         productos.pop ({id: 4, producto: "Zapallo", categoria: "Verduras" , precio:20})
-         console.log (productos);
-    
-
-
-
 
 
         //EVENTOS
@@ -161,9 +151,6 @@ console.log("Cantidad de productos:" , cantidad_producto);
           console.log("Formulario Enviado Correctamente");
         }
 
-     
-     
-     
      
         //STORAGE Y JSON
         
@@ -217,3 +204,6 @@ console.log("Cantidad de productos:" , cantidad_producto);
             console.log(usuario);
           }
         }
+
+        //OPERADORES AVANZADOS
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || []
