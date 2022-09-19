@@ -12,8 +12,8 @@
 
 .cuadrado{
     grid-area: contactanos_contacto;
-    width: 370px;
-    height: 640px;
+    width: 380px;
+    height: 800px;
     background-color: rgba(223, 163, 86, 0.822);
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +25,7 @@
 }
 
 .texto1{
-    font-size: 0.65cm;
+    font-size: 0.70cm;
 }
 
 #boton{
@@ -43,7 +43,7 @@
 
 .section-cuadrado .carrito-titulo{
     border: solid 2px  white;
-    padding-left: 40px;
+    padding-left: 50px;
     color: white;
 
 }

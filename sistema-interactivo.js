@@ -30,180 +30,170 @@ let usuario_registrado = "Juan"
       }
     }
 
-//CALCULO DE IVA
-function calcular_iva(precio){
-    let iva = precio*0.20
-    return iva
-}
-
-console.log("Bienvenido al carrito de compras");
-console.log("Los productos de hoy son: Pollo $30 / Lentejas $12 / Ketchup $7 / Zapallo $20");
-
-    let nombre_producto = prompt("¿Qué producto desea adquirir?");
-    let precio_producto = parseInt(prompt("Ingrese el precio del producto"));
-    let cantidad_producto = prompt("Ingrese la cantidad que desea llevar");
-   
-console.log("Producto: ", nombre_producto);
-console.log("Precio de producto:", precio_producto);
-console.log("Cantidad de productos:" , cantidad_producto);
-
-    let precio_mas_iva = precio_producto + calcular_iva (cantidad_producto);
-    console.log("El precio con iva es de: $", precio_mas_iva);
-    
-//Objetos
-
-    const producto = {
-        id: 1,
-        nombre: 'Pollo',
-        categoria: 'Carnes',
-        precio: 1.99,
-        nutrientes : {
-        calorias: 176,
-         grasas: 9.9,
-         proteina: 28.7
-       }
-      }
-      console.log(producto);
-
-      const producto2 = {
-        id: 2,
-        nombre: 'Lentejas',
-        categoria: 'Legumbres',
-        precio: 12,
-        nutrientes : {
-        calorias: 116,
-         grasas: 0.4,
-         proteina: 9
-       }
-      }
-      console.log(producto2);
-
-      const producto3 = {
-        id: 3,
-        nombre: 'Ketchup',
-        categoria: 'Condimentos',
-        precio: 7,
-        nutrientes : {
-        calorias: 112,
-         grasas: 0.2,
-         proteina: 1.3
-       }
-      }
-      console.log(producto3);
-
-      const producto4 = {
-        id: 4,
-        nombre: 'Zapallo',
-        categoria: 'Verduras',
-        precio: 20,
-        nutrientes : {
-        calorias: 26,
-         grasas: 0.1,
-         proteina: 1
-       }
-      }
-      console.log(producto4);
-
-     const productos = [{ id: 1, producto: "Pollo",    categoria: "Carnes", calorias: 26, grasas: 0.1, proteina: 1},
-                        {  id: 2, producto: "Lentejas", categoria: "Legumbres", calorias: 116, grasas: 0.4, proteina: 9},
-                        {  id: 3, producto: "Ketchup",  categoria: "Condimentos", calorias: 112, grasas: 0.2, proteina: 1.3},  
-                        {  id: 4, producto: "Zapallo",  categoria:  "Verduras", calorias: 26, grasas: 0.1, proteina: 1}];
-
-      for (const Pollo of productos){
-            console.log(Pollo.id);
-            console.log(Pollo.categoria);     
-            console.log(Pollo.calorias);
-            console.log(Pollo.grasas);
-            console.log(Pollo.proteina);
-      }
-
-      for (const Lentejas of productos){
-        console.log(Lentejas.id);
-        console.log(Lentejas.categoria);   
-        console.log(Lentejas.calorias);
-        console.log(Lentejas.grasas);
-        console.log(Lentejas.proteina);  
+        // Variables
+const baseDeDatos = [
+  {
+      id: 1,
+      nombre: 'Papas',
+      precio: 30,
+  },
+  {
+      id: 2,
+      nombre: 'Cebolla',
+      precio: 15,
+  },
+  {
+      id: 3,
+      nombre: 'Pollo',
+      precio: 100,
+  },
+  {
+      id: 4,
+      nombre: 'Zanahoria',
+      precio: 50,
+  },
+  {
+    id: 5,
+    nombre: 'Ketchup',
+    precio: 10,
   }
 
-    for (const Ketchup of productos){
-    console.log(Ketchup.id);
-    console.log(Ketchup.categoria);  
-    console.log(Ketchup.calorias);
-    console.log(Ketchup.grasas);
-    console.log(Ketchup.proteina); 
-    }
+];
 
-    for (const Zapallo of productos){
-        console.log(Zapallo.id);
-        console.log(Zapallo.categoria);
-        console.log(Zapallo.calorias);
-        console.log(Zapallo.grasas);
-        console.log(Zapallo.proteina);    
-    }
+let carrito = [];
+const divisa = '$';
+const DOMitems = document.querySelector('#items');
+const DOMcarrito = document.querySelector('#carrito');
+const DOMtotal = document.querySelector('#total');
+const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+
+// Funciones
 
 
-        //EVENTOS
-        let miFormulario  = document.getElementById("formulario");
-        miFormulario.addEventListener("submit" , validarFormulario);
+function renderizarProductos() {
+  baseDeDatos.forEach((info) => {
+      // Estructura
+      const miNodo = document.createElement('div');
+      miNodo.classList.add('card', 'col-sm-4');
+      // Body
+      const miNodoCardBody = document.createElement('div');
+      miNodoCardBody.classList.add('card-body');
+      // Titulo
+      const miNodoTitle = document.createElement('h5');
+      miNodoTitle.classList.add('card-title');
+      miNodoTitle.textContent = info.nombre;
+      // Imagen
+      const miNodoImagen = document.createElement('img');
+      miNodoImagen.classList.add('img-fluid');
+      miNodoImagen.setAttribute('src', info.imagen);
+      // Precio
+      const miNodoPrecio = document.createElement('p');
+      miNodoPrecio.classList.add('card-text');
+      miNodoPrecio.textContent = `${info.precio}${divisa}`;
+      // Boton 
+      const miNodoBoton = document.createElement('button');
+      miNodoBoton.classList.add('btn', 'btn-primary');
+      miNodoBoton.textContent = '+';
+      miNodoBoton.setAttribute('marcador', info.id);
+      miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+      // Insertamos
+      miNodoCardBody.appendChild(miNodoImagen);
+      miNodoCardBody.appendChild(miNodoTitle);
+      miNodoCardBody.appendChild(miNodoPrecio);
+      miNodoCardBody.appendChild(miNodoBoton);
+      miNodo.appendChild(miNodoCardBody);
+      DOMitems.appendChild(miNodo);
+  });
+}
 
-        function validarFormulario(e) {
-          e.preventDefault();
-          console.log("Formulario Enviado Correctamente");
-        }
-
-     
-        //STORAGE Y JSON
-        
-        localStorage.setItem("cliente_uno" , "Juan");
-        localStorage.setItem("productos" , ["Pollo" , "Lentejas" , "Ketchup" , "Zapallo"]);
-
-        let usuario_uno = localStorage.getItem("cliente_uno");
-        let colores = localStorage.getItem("productos");
-
-        console.log(usuario_uno);
-        console.log(colores);
-
-        console.log(typeof colores);
-
-        console.log(localStorage.length);
-
-        function guardar_session(){
-          sessionStorage.setItem("cliente_dos" , "Maria");
-          sessionStorage.setItem("lista_dos" , ["Banana" , "Naranja" , "Pomelo"]);
-        }
-
-        let boton1 = document.getElementById("boton1");
-
-        boton1.addEventListener("click" , guardar_session);
-
-        let usuario = [{nombre:"Juan" , apellido:"Martinez"} ,{nombre:"Maria" , apellido:"Farias"}];
-
-        localStorage.setItem("arreglo_clientes" , usuario);
+/**
+* Evento para añadir un producto al carrito de la compra
+*/
+function anyadirProductoAlCarrito(evento) {
   
-        let arreglo_usuarios = [];
+  carrito.push(evento.target.getAttribute('marcador'))
+ 
+  renderizarCarrito();
 
-        function set_data(){
+}
 
-          let nombre_usuario = document.getElementById("nombre");
-          let apellido_usuario = document.getElementById("apellido");
 
-          let usuario = {nombre:nombre_usuario.value , apellido:apellido_usuario.value};
+function renderizarCarrito() {
 
-          arreglo_usuarios.push(usuario);
+  DOMcarrito.textContent = '';
+  
+  const carritoSinDuplicados = [...new Set(carrito)];
+  
+  carritoSinDuplicados.forEach((item) => {
+      
+      const miItem = baseDeDatos.filter((itemBaseDatos) => {
+       
+          return itemBaseDatos.id === parseInt(item);
+      });
+      
+      const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+         
+          return itemId === item ? total += 1 : total;
+      }, 0);
+      
+      const miNodo = document.createElement('li');
+      miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
+      
+      const miBoton = document.createElement('button');
+      miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+      miBoton.textContent = 'X';
+      miBoton.style.marginLeft = '1rem';
+      miBoton.dataset.item = item;
+      miBoton.addEventListener('click', borrarItemCarrito);
+   
+      miNodo.appendChild(miBoton);
+      DOMcarrito.appendChild(miNodo);
+  });
+  
+  DOMtotal.textContent = calcularTotal();
+}
 
-          let usuario_JSON = JSON.stringify( usuario );
-          console.log( usuario_JSON );
 
-          localStorage.setItem("usuario" , usuario_JSON);
+function borrarItemCarrito(evento) {
+  
+  const id = evento.target.dataset.item;
+  
+  carrito = carrito.filter((carritoId) => {
+      return carritoId !== id;
+  });
 
-          let recuperando_arreglo = localStorage.getItem("arreglo_usuarios");
+  renderizarCarrito();
+}
 
-          recuperando_arreglo = JSON.parse(recuperando_arreglo);
-          
-          for( let usuario of recuperando_arreglo){
-            console.log(usuario);
-          }
-        }
 
-        //OPERADORES AVANZADOS
-        const carrito = JSON.parse(localStorage.getItem("carrito")) || []
+function calcularTotal() {
+  
+  return carrito.reduce((total, item) => {
+      
+      const miItem = baseDeDatos.filter((itemBaseDatos) => {
+          return itemBaseDatos.id === parseInt(item);
+      });
+      
+      return total + miItem[0].precio;
+  }, 0).toFixed(2);
+}
+
+
+function vaciarCarrito() {
+  
+  carrito = [];
+  
+  renderizarCarrito();
+}
+
+// Eventos
+DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+
+
+renderizarProductos();
+renderizarCarrito();
+
+
+        
+
