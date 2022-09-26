@@ -36,26 +36,31 @@ const baseDeDatos = [
       id: 1,
       nombre: 'Papas',
       precio: 30,
+      imagen: "./img/papas.jpg"
   },
   {
       id: 2,
       nombre: 'Cebolla',
       precio: 15,
+      imagen: "./img/cebolla.jpg"
   },
   {
       id: 3,
       nombre: 'Pollo',
       precio: 100,
+      imagen: "./img/pollo.jpg"
   },
   {
       id: 4,
       nombre: 'Zanahoria',
       precio: 50,
+      imagen: "./img/zanahoria.jpg"
   },
   {
     id: 5,
     nombre: 'Ketchup',
     precio: 10,
+    imagen: "./img/ketchup.jpg"
   }
 
 ];
@@ -194,6 +199,37 @@ DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 renderizarProductos();
 renderizarCarrito();
 
+//TOASTY LIBRERIA
+const toastr = document.querySelector("#toastr");
 
-        
+const openToastr = (typeMsg, message) => {
+  toastr.style.display = "flex";
+  toastr.innerHTML = message;
+  toastr.classList.add(typeMsg);
 
+  closeToastr(typeMsg);
+}
+
+const closeToastr = (typeMsg) => {
+  setTimeout(()=> {
+    toastr.style.display = "none";
+    toastr.classList.remove(typeMsg);
+    
+  }, 2500)
+}
+
+
+// FETCH
+let url = 'https://jsonplaceholder.typicode.com/users/';
+fetch(url)
+    .then( response => response.json() )
+    .then( data => mostrarData(data) )
+    .catch( error => console.log(error) )
+
+const mostrarData = (data) => {
+    console.log(data)
+    let body = ""
+    for (var i = 0; i < data.length; i++) {      
+       body+=`<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td></tr>`
+    }
+}
