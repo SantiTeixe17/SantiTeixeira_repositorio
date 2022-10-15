@@ -1,35 +1,4 @@
 
-
-//DOM
-let usuario_registrado = "Juan"
-
-
-    function saludar(){
-      let nombre = document.getElementById("nombre_usuario");
-
-      console.log("Hola bienvenido/a" , nombre.value);
-
-    }
-
-    function validar(){
-      let nombre = document.getElementById("nombre_usuario");
-      let mensaje = document.getElementById("mensaje");
-
-      if( nombre.value == usuario_registrado){
-        let parrafo = document.createElement("p");
-        mensaje.innerHTML = "";
-        parrafo.innerText = "Bienvenido"
-        parrafo.style.fontFamily= "Verdana";
-        parrafo.style.fontSize = "25px";
-        mensaje.append(parrafo);
-
-      }
-      else{
-          document.body.innerHTML = "<h2>ERROR USUARIO INCORRECTO</h2>"
-                                    "<p>El usuario: ${nombre.value} no se encontro</p>";
-      }
-    }
-
         // Variables
 const baseDeDatos = [
   {
@@ -233,3 +202,4 @@ const mostrarData = (data) => {
        body+=`<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td></tr>`
     }
 }
+
