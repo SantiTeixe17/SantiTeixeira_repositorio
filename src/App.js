@@ -6,6 +6,7 @@ import { BrowserRouter as Router} from "react-router-dom";
 import Pages from "./components/Page.js";
 import "boxicons";
 
+
 function App() {
 
   return (
@@ -22,3 +23,4 @@ function App() {
 }
 
 export default App;
+

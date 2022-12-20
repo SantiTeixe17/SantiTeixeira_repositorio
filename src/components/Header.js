@@ -14,7 +14,6 @@ export const Header = () => {
     setMenu(!menu)
   }
  
-
   return (
     <header>
       <div className="menu">
@@ -25,14 +24,9 @@ export const Header = () => {
         <img src={Nike} alt="Nike" width="150" />
       </div>
       </Link>
-      <ul>
-        <li>
-          <Link to="/">INICIO</Link>
-        </li>
-        <li>
-          <Link to="/productos">PRODUCTOS</Link>
-        </li>
-      </ul>
+      <Link to='/'>Inicio</Link>
+                <Link to='/category/zapatillas'>Ver Todo</Link>
+                <Link to='/category2'>Categoria</Link>
       <div className="cart" onClick={toogleMenu}>
         <box-icon name="cart"></box-icon>
         <span className="item__total"> {carrito.length} </span>
@@ -40,3 +34,4 @@ export const Header = () => {
     </header>
   );
 };
+

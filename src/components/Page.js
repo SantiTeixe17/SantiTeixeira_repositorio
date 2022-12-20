@@ -9,7 +9,8 @@ export default function Page() {
     <section>
       <Switch>
 				<Route path="/" exact component={Inicio} />
-				<Route path="/productos" exact component={ProductosList} />
+				<Route path="/category/zapatillas" exact component={ProductosList} />
+        <Route path="/category2" exact component={ProductosList} />
         <Route path="/producto/:id" exact component={ProductosDetalles} />
 			</Switch>
     </section>
