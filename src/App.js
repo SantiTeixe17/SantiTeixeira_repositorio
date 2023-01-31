@@ -1,26 +1,42 @@
-import React from 'react'
-import { Header } from "./components/Header";
-import { Carrito } from "./components/Carrito";
-import {DataProvider} from './context/DataProvider';
-import { BrowserRouter as Router} from "react-router-dom";
-import Pages from "./components/Page.js";
-import "boxicons";
+import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar/Navbar'
+import { CartProvider } from './context/CartContext';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+
 
 
 function App() {
 
+
+
   return (
-    <DataProvider>
     <div className="App">
-      <Router>
-      <Header />
-      <Carrito />
-      <Pages />
-      </Router>
+      <CartProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/category/:categoryId' element={<ItemListContainer />} />
+            <Route path='/detail/:productId' element={<ItemDetailContainer />}/>
+            <Route path='/cart' element={<Cart />}/>
+            <Route path='/checkout' element={<Checkout />}/>
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </div>
-    </DataProvider>
+    
   );
+  
 }
 
-export default App;
 
+export default App;

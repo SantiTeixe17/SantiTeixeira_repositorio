@@ -1,16 +1,23 @@
-import { useContext, useState, } from 'react'
-import { DataProvider } from 'context/DataProvider'
+import { useContext, useState } from 'react'
+import { CartContext } from '../../context/CartContext'
+import "./Checkout.css"
+
 
 import { collection, getDocs, query, where, documentId, writeBatch, addDoc } from 'firebase/firestore'
 import { db } from '../../services/firebase/firebaseConfig'
 
-import { useNavigate } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Checkout = () => {
-    const { cart, getTotal, clearCart } = useContext(DataProvider)
+    const { cart, getTotal, clearCart } = useContext(CartContext)
     const [loading, setLoading] = useState(false)
 
     const navigate = useNavigate()
+
+    const [nombre, setNombre] = useState("")
+    const [email, setEmail] = useState("")
+    const [numero, setNumero] = useState("")
+    const [codigo, setCodigo] = useState("")
 
     const handleCreateOrder = async () => {
         setLoading(true)
@@ -18,9 +25,10 @@ const Checkout = () => {
         try {
             const objOrder = {
                 buyer: {
-                    name: 'Santino Teixeira',
-                    email: 'santiteix@gmail.com',
-                    phone: '123456789'
+                    name: {nombre},
+                    email: {email},
+                    phone: {numero},
+                    codigo: {codigo}
                 },
                 items: cart,
                 total: getTotal()
@@ -80,9 +88,29 @@ const Checkout = () => {
         return <h1>Generando Orden...</h1>
     }
 
+    
     return (
         <div>
-            <h1>Checkout</h1>
+            <u><h1>Tus datos</h1></u>
+            
+
+             <form className='formulario'>
+                    <label for="nombre"> Tu Nombre y Apellido: <br/>
+                    <input type="text" placeholder="Nombre y Apellido" value={nombre} onChange={(e) => setNombre(e.target.value)} /> <br/><br/>
+                    </label><br/><br/>
+                    <label for="telefono"> Tu Telefono: <br/>
+                    <input type="string" placeholder="Numero de telefono" value={numero} onChange={(e) => setNumero(e.target.value)}/> <br/><br/>
+                    </label><br/><br/>
+                    <label for="email"> Tu Email: <br/>
+                        <input type="email" placeholder="aaa@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)}/><br/>
+                    </label><br/><br/> 
+                    <label for="codigo postal"> Tu Código Postal: <br/>
+                        <input type="string" placeholder="Codigo Postal" value={codigo} onChange={(e) => setCodigo(e.target.value)}/><br/>
+                    </label><br/><br/> 
+
+            </form> 
+             
+
             <button onClick={handleCreateOrder}>Confirmar orden</button>
         </div>
     )

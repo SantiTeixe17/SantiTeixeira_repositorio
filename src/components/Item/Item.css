@@ -1,0 +1,20 @@
+.detalle {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.precio {
+    background-color: darkgray;
+    color: black;
+    border: 0.5px solid ;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
